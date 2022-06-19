@@ -9,8 +9,8 @@ if os.path.exists("local.env"):
 
 load_dotenv()
 admins = {}
-SESSION_NAME = getenv("SESSION_NAME", "5182584060:AAHd5ULDqv92X3WjzI7j75qOvp_bqeJz5LE")
-BOT_TOKEN = getenv("BOT_TOKEN", "5182584060:AAFcjB1qIQQ9_n_JK3W5FHHKd_hNR6cHsFY")
+SESSION_NAME = getenv("SESSION_NAME", "AgByv4Fk048-B-liO4m78_j1AWb8mlhBRlO9KL3JcOesN4VashHUHxNEi9pO-VCXzfbdQpEUGCp2utbyahOIknI1LiJtfec-PWhpHInsvfUvz7JG3pEWlL4fyjPoBHHX1Cibd7zSVTMlmoRu3XNs7c6k9eFzvwqUvp1dxSGv0aakTqj7JlAm2umz2ga2psbVeyKksReGe9Ercr1zXO6fUSmpux52ONcWAs10JfnTo41LZ8Bujg5Tgj5G89KV6nQFT4MalmHfF7HeEO8XGnri0xtHeZVp-VgX-KRjtzaQB8TiHOeL723gpAf6Bn5_dU_vy2acwxLRGtfIcd65Sl0zU_M1AAAAATkAKpQA")
+BOT_TOKEN = getenv("BOT_TOKEN", "5182584060:AAHd5ULDqv92X3WjzI7j75qOvp_bqeJz5LE")
 BOT_NAME = getenv("BOT_NAME", "20 music")
 API_ID = int(getenv("API_ID", "11667194"))
 API_HASH = getenv("API_HASH", "d9d35aba2f380f414a3aae53565b3334")
