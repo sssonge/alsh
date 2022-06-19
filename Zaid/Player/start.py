@@ -17,8 +17,7 @@ HELP_TEXT = """
 
 
 
-USER_TEXT = """
-🤍 ** - تابع الاوامر في الاسفل ↓ :** 
+USER_TEXT = """ ** - تابع الاوامر في الاسفل ↓ :** 
 
 \u2022 -› .شغل - بالرد على ملف صوتي او اسم أغنية
 \u2022 -› .تخطي - لتخطي اغنية في التشغيل
@@ -31,11 +30,10 @@ USER_TEXT = """
 \u2022 -› .بنك - لإضهار بنك البوت
 \u2022 -› .انضم - لدعوة حساب المساعد
 
-. شكراً لقرائتك الاوامر - أتمنى لك يوماً تعيساً 🦴.
+. شكراً لقرائتك الاوامر.
 """
 
-SPAM_TEXT = """
-🤍 **طريقة التشغيل ، تابع في الاسفل ↓** 
+SPAM_TEXT = """ **طريقة التشغيل ، تابع في الاسفل ↓** 
 
 \u2022 1-› أولا ، أضفني الى مجموعتك
 \u2022 2-› بعد ذالك قم برفعي كمشرف واعطائي صلاحيات مثل باقي البشر.
@@ -50,16 +48,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
     if query.data=="help":
         buttons = [
             [
-                InlineKeyboardButton("اެݪمِطَۅࢪ", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                InlineKeyboardButton("اެݪاۅاެمࢪ", callback_data="users"),
+                InlineKeyboardButton("المطور", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                InlineKeyboardButton("الاوامر", callback_data="users"),
             ],
             [
-                InlineKeyboardButton("طࢪيقة اެݪتشغيݪ", callback_data="spam"),
+                InlineKeyboardButton("طريقة التشغيل", callback_data="spam"),
             ],            
 
             [
-                InlineKeyboardButton("اެݪتاެݪي", callback_data="home"),
-                InlineKeyboardButton("مِسِحِ", callback_data="close"),
+                InlineKeyboardButton("التالي", callback_data="home"),
+                InlineKeyboardButton("مسح", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -76,15 +74,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         USERNAME = get_me.username
         buttons = [
             [
-                InlineKeyboardButton("🥇 اެضفني اެݪى مجمۅعتَك 🥇", url=f'https://t.me/{USERNAME}?startgroup=true'),
+                InlineKeyboardButton("اضفني الى مجموعتك", url=f'https://t.me/{USERNAME}?startgroup=true'),
             ],
             [
-                InlineKeyboardButton("طࢪيقة اެݪتشغيݪ", callback_data="spam"),
+                InlineKeyboardButton("طريقة التشغيل", callback_data="spam"),
             ],
             
             [
-                InlineKeyboardButton("اެݪاۅاެمࢪ", callback_data="help"),
-                InlineKeyboardButton("🦎 اެݪمطَۅࢪ", url=f"https://t.me/{UPDATES_CHANNEL}")
+                InlineKeyboardButton("الاوامر", callback_data="help"),
+                InlineKeyboardButton("المطور", url=f"https://t.me/{UPDATES_CHANNEL}")
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -99,8 +97,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="users":
         buttons = [
             [
-                InlineKeyboardButton("اެݪاۅاެمࢪ", callback_data="help"),
-                InlineKeyboardButton("مِسِحِ", callback_data="close"),
+                InlineKeyboardButton("الاوامر", callback_data="help"),
+                InlineKeyboardButton("مسح", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -115,8 +113,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="admins":
         buttons = [
             [
-                InlineKeyboardButton("اެݪتاެݪي", callback_data="help"),
-                InlineKeyboardButton("مِسِحِ", callback_data="close"),
+                InlineKeyboardButton("التالي", callback_data="help"),
+                InlineKeyboardButton("مسح", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -128,8 +126,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="raid":
         buttons = [
             [
-                InlineKeyboardButton("اެݪتاެݪي", callback_data="help"),
-                InlineKeyboardButton("مِسِحِ", callback_data="close"),
+                InlineKeyboardButton("التالي", callback_data="help"),
+                InlineKeyboardButton("مسح", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -144,8 +142,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="spam":
         buttons = [
             [
-                InlineKeyboardButton("طࢪيقة اެݪتشغيݪ", callback_data="help"),
-                InlineKeyboardButton("مِسِحِ", callback_data="close"),
+                InlineKeyboardButton("طريقة التشغيل", callback_data="help"),
+                InlineKeyboardButton("مسح", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -171,15 +169,15 @@ async def start(client: Client, message: Message):
     USERNAME = get_me.username
     buttons = [
             [
-                InlineKeyboardButton("🥇 اެضفني اެݪى مجمۅعتَك 🥇", url=f'https://t.me/{USERNAME}?startgroup=true'),
+                InlineKeyboardButton("اضفني الى مجموعتك", url=f'https://t.me/{USERNAME}?startgroup=true'),
             ],
             [
-                InlineKeyboardButton("طࢪيقة اެݪتشغيݪ", callback_data="spam"),
+                InlineKeyboardButton("طريقة التشغيل", callback_data="spam"),
             ],
             
             [
-                InlineKeyboardButton("اެݪاۅاެمࢪ", callback_data="help"),
-                InlineKeyboardButton("🦎 اެݪمطَۅࢪ", url=f"https://t.me/{UPDATES_CHANNEL}")
+                InlineKeyboardButton("الاوامر", callback_data="help"),
+                InlineKeyboardButton("المطور", url=f"https://t.me/{UPDATES_CHANNEL}")
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
